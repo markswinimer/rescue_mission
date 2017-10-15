@@ -1,9 +1,6 @@
 <h1><%= @question.title %></h1>
+  <p><%= @question.details %></p><br />
 
-  <p>
-    <%= @question.details %>
-  </p>
-  <br>
   <h2>Answers</h2>
 
   <%= form_for [@question, @answer] do |f| %>
@@ -11,15 +8,10 @@
     <div class="row">
       <%= f.label :details %><br />
       <%= f.text_field :details %>
-    </div>
-
-    <br>
+    </div><br />
 
     <div class="actions">
       <%= f.submit %>
     </div>
-
-  <% end %>
-  <br>
-
+  <% end %><br/>
 <%= link_to 'Back', questions_path %>
