@@ -1,0 +1,10 @@
+<h1>Questions Index</h1>
+
+  <% @questions.each do |question| %>
+
+    <%= link_to(question) do %>
+      <h3 class="question"><%= question.title %></h3>
+    <% end %>
+  <% end %>
+
+<%= link_to 'New', new_question_path %>
